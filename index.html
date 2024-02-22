@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>o que temos aqui???</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ubuntu:wght@300&display=swap"rel="stylesheet">
+<link rel="shortcut icon" type="imagex/png" href="heart_icon.ico">
+<style>
+    body, html {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url('background.jpg');
+        background-size: cover; 
+        background-repeat: no-repeat; 
+        background-attachment: fixed;
+    }
+    #surpriseButton {
+        width: 500px;
+        height: 500px;
+        background-color: #FF5C87; /* Cor vermelha */
+        border-radius: 50%; /* Para tornar o botão redondo */
+        color: #060000;
+        font-family: Ubuntu;
+        font-size: 29px;
+        font-weight: bold;
+        text-align: center;
+        line-height: 200px; /* Para centralizar o texto verticalmente */
+        cursor: pointer;
+        transition: opacity 0.5s ease; /* Animação de desaparecimento */
+    }
+</style>
+</head>
+<body>
+
+<button id="surpriseButton" onclick="disappearAndRedirect()">APERTE AQUI PARA UMA SURPRESA</button>
+
+<script>
+function disappearAndRedirect() {
+    var button = document.getElementById('surpriseButton');
+    button.style.opacity = '0'; // Definindo opacidade zero para desaparecer
+    setTimeout(function() {
+        window.location.href = 'paginaPrincipal.html'; // Redirecionando após 500ms
+    }, 500);
+}
+</script>
+
+</body>
+</html>
